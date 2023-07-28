@@ -2747,7 +2747,7 @@ input, select, textarea {
 		}
 
 			#header a:hover {
-				color: #ffffff !important;
+				color: #ffc482 !important;
 			}
 
 		#header > header {
@@ -2806,9 +2806,10 @@ input, select, textarea {
 				margin: 0;
 				padding: 0;
 			}
+				/* COLOR LINEAS DE MENU */
 
 				#header > nav ul li {
-					border-top: solid 2px #ffffff;
+					border-top: solid 2px #b0b0b0;
 					display: block;
 					padding: 0;
 				}
@@ -2827,7 +2828,7 @@ input, select, textarea {
 
 						#header > nav ul li a.active {
 							background: #fff;
-							color: #4acaa8 !important;
+							color: #ffa500 !important;
 						}
 
 					#header > nav ul li:first-child {
@@ -3339,4 +3340,8 @@ input, select, textarea {
 	  
 	  .inner {
 		margin-bottom: 15px; /* Ajusta el valor para el espacio deseado */
+	  }
+
+	  button::marker {
+		display: none;
 	  }
