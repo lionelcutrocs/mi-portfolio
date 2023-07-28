@@ -2421,7 +2421,7 @@ input, select, textarea {
 			}
 			/* COLOR ICONOS FONDO */
 			ul.feature-icons li:before {
-				background: #ffa500;
+				background: #ffb441;
 				border-radius: 100%;
 				color: #ffffff;
 				display: block;
@@ -2770,7 +2770,7 @@ input, select, textarea {
 			}
 
 			#header > header p {
-				color: #ffc482;
+				color: #ffffff;
 				font-style: italic;
 				margin: 1em 0 0 0;
 			}
@@ -2791,7 +2791,7 @@ input, select, textarea {
 			}
 
 				#header > footer .icons li a {
-					color: #b7eadc;
+					color: #ffffff;
 				}
 
 		#header > nav {
@@ -3096,7 +3096,7 @@ input, select, textarea {
 					}
 
 					#titleBar .toggle:before {
-						background: #4acaa8;
+						background: #ffc482;
 						color: #ffffff;
 						content: '\f0c9';
 						display: block;
