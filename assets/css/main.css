@@ -1,11 +1,7 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
 
-/*
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -240,13 +236,24 @@ input, select, textarea {
 		text-align: left;
 	}
 
+
 	.align-center {
 		text-align: center;
 	}
 
+	.align-center {
+		margin-left: 39px;
+	}
+
+
 	.align-right {
 		text-align: right;
 	}
+
+	.align-right {
+		margin-right: 50px;
+	}
+
 
 /* Row */
 
@@ -3326,3 +3333,10 @@ input, select, textarea {
 			}
 
 	}
+	.button-container {
+		margin-bottom: 10px; /* Ajusta el valor para el espacio deseado */
+	  }
+	  
+	  .inner {
+		margin-bottom: 15px; /* Ajusta el valor para el espacio deseado */
+	  }
