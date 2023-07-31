@@ -133,7 +133,7 @@
 								</div>
 							</section>
 
-												<!-- Four -->
+					 	<!-- Four -->
 						<section id="four">
 							<div class="container">
 							  <h3>¡Estemos en Contacto!</h3>
@@ -155,56 +155,76 @@
 							</div>
 						  </section>
 
-						  <div id="resultado-del-envio"></div>
+						  <div class="popup" id="popup-message">
+							<div class="popup-content">
+								<span class="close" onclick="closePopup()">&times;</span>
+								<div id="resultado-del-envio"></div>
+							</div>
+						  </div>
 
 						  <script>
 							document.addEventListener("DOMContentLoaded", function() {
-							  // Selecciona el formulario por su ID
-							  const contactForm = document.getElementById("contact-form");
-							
-							  // Agrega un evento de escucha para el envío del formulario
-							  contactForm.addEventListener("submit", function(e) {
-								e.preventDefault(); // Evitar el envío del formulario por defecto
-							
-								// Obtener los datos del formulario
-								const name = document.getElementById("name").value;
-								const email = document.getElementById("email").value;
-								const subject = document.getElementById("subject").value;
-								const message = document.getElementById("message").value;
-							
-								// Construir la URL de Formspree con los datos del formulario
-								const url = "https://formspree.io/lionel.cutro@gmail.com"; // Reemplaza "tu_correo@example.com" con tu dirección de correo de Formspree
-							
-								// Crear el objeto de datos que enviaremos a Formspree
-								const formData = {
-								  name: name,
-								  _replyto: email,
-								  subject: subject,
-								  message: message
-								};
-							
-								// Enviar el formulario mediante Fetch API (AJAX) a Formspree
-								fetch(url, {
-								  method: "POST",
-								  headers: {
-									"Content-Type": "application/json"
-								  },
-								  body: JSON.stringify(formData)
-								})
-								.then(response => response.json())
-								.then(data => {
-								  // Mostrar mensaje de éxito en algún lugar del HTML
-								  const resultMessage = document.getElementById("resultado-del-envio");
-								  resultMessage.innerHTML = "<p>Mensaje enviado con éxito. ¡Gracias por contactarme!</p>";
-								})
-								.catch(error => {
-								  // Mostrar mensaje de error en algún lugar del HTML
-								  const resultMessage = document.getElementById("resultado-del-envio");
-								  resultMessage.innerHTML = "<p>Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.</p>";
+								// Selecciona el formulario por su ID
+								const contactForm = document.getElementById("contact-form");
+								const popup = document.getElementById("popup-message");
+						
+								// Función para mostrar el pop-up
+								function showPopup(message) {
+									const resultMessage = document.getElementById("resultado-del-envio");
+									resultMessage.innerHTML = message;
+									popup.style.display = "block";
+								}
+						
+								// Función para cerrar el pop-up
+								function closePopup() {
+									popup.style.display = "none";
+								}
+						
+								// Agrega un evento de escucha para el envío del formulario
+								contactForm.addEventListener("submit", function(e) {
+									e.preventDefault(); // Evitar el envío del formulario por defecto
+						
+									// Obtener los datos del formulario
+									const name = document.getElementById("name").value;
+									const email = document.getElementById("email").value;
+									const subject = document.getElementById("subject").value;
+									const message = document.getElementById("message").value;
+						
+									// Construir la URL de Formspree con los datos del formulario
+									const url = "https://formspree.io/lionel.cutro@gmail.com"; // Reemplaza "tu_correo@example.com" con tu dirección de correo de Formspree
+						
+									// Crear el objeto de datos que enviaremos a Formspree
+									const formData = {
+										name: name,
+										_replyto: email,
+										subject: subject,
+										message: message
+									};
+						
+									// Enviar el formulario mediante Fetch API (AJAX) a Formspree
+									fetch(url, {
+										method: "POST",
+										headers: {
+											"Content-Type": "application/json"
+										},
+										body: JSON.stringify(formData)
+									})
+									.then(response => response.json())
+									.then(data => {
+										// Mostrar mensaje de éxito o error en el pop-up
+										if (data.ok) {
+											showPopup("<p>Mensaje enviado con éxito. ¡Gracias por contactarme!</p>");
+										} else {
+											showPopup("<p>Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.</p>");
+										}
+									})
+									.catch(error => {
+										// Mostrar mensaje de error en el pop-up
+										showPopup("<p>Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.</p>");
+									});
 								});
-							  });
 							});
-							</script>
+						</script>
 
 				<!-- Footer -->
 					<section id="footer">
