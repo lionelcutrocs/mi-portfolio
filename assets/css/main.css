@@ -1,7 +1,7 @@
-@import url("fontawesome-all.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
 
-
+ 
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -70,7 +70,7 @@ input, select, textarea {
 
 /* Basic */
 	.naranja_bold {
-		color: #ffb441;
+		color: #ffa500;
 		font-weight: bold;
 	}
 
@@ -2419,6 +2419,7 @@ input, select, textarea {
 				font-family: 'Font Awesome 5 Free';
 				font-weight: 400;
 			}
+
 			/* COLOR ICONOS FONDO */
 			ul.feature-icons li:before {
 				background: #ffb441;
@@ -2433,6 +2434,23 @@ input, select, textarea {
 				top: 0;
 				width: 2.5em;
 			}
+
+.feature-icons li {
+  position: relative;
+}
+
+.feature-icons li svg.icon {
+  background: #ffb441;
+  border-radius: 50%;
+  color: #ffffff;
+  display: block;
+  height: 2.5em;
+  line-height: 2.5em;
+  text-align: center;
+  width: 2.5em;
+  padding: 0.3em;
+  /* Agrega cualquier otro estilo personalizado aquí */
+}
 
 /* Icons */
 
@@ -2637,7 +2655,7 @@ input, select, textarea {
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
-			background-color: #ffa500;
+			background-color: #ffb441;
 			color: #ffffff !important;
 		}
 
@@ -3345,3 +3363,34 @@ input, select, textarea {
 	  button::marker {
 		display: none;
 	  }
+
+
+	/* Estilos para el pop-up */
+	.popup {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	.popup-content {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 20px;
+		background-color: white;
+		border-radius: 5px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	}
+
+	.close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		font-size: 20px;
+		cursor: pointer;
+	}
