@@ -2393,13 +2393,13 @@ input, select, textarea {
 /* Feature Icons */
 
 /* Estilos para la lista no ordenada */
-ol.custom-icons {
+ul.custom-icons {
 	list-style: none;
 	padding-left: 0;
   }
   
   /* Estilos para los elementos de lista */
-  ol.custom-icons li {
+  ul.custom-icons li {
 	list-style-type: none;
 	text-decoration: none;
 	display: inline-block;
@@ -2411,7 +2411,7 @@ ol.custom-icons {
   }
   
   /* Estilos para los íconos */
-  ol.custom-icons li i {
+  ul.custom-icons li i {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -2427,7 +2427,7 @@ ol.custom-icons {
   }
   
   /* Estilos para el texto junto al ícono */
-  ol.custom-icons li .icon-text {
+  ul.custom-icons li .icon-text {
 	position: absolute;
 	left: 0em; /* Ajusta este valor para la distancia horizontal entre el ícono y el texto */
 	top: 0.5em; /* Ajusta este valor para la distancia vertical del texto respecto al ícono */
