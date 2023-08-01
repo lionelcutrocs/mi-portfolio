@@ -2433,7 +2433,12 @@ ul.custom-icons {
 	top: 0.5em; /* Ajusta este valor para la distancia vertical del texto respecto al ícono */
 	color: #000000; /* Cambia el color del texto si lo deseas */
   }
-  
+  /* Media query para pantallas más pequeñas (dispositivos móviles) */
+@media (max-width: 768px) {
+	ul.custom-icons li {
+	  width: 100%; /* Cambia el ancho para que sea 100% y se muestre en una sola columna */
+	}
+  }
   
   	/* ICONOS VIEJOS */
 	ul.feature-icons {
