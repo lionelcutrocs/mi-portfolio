@@ -2230,13 +2230,13 @@ input, select, textarea {
 /* List */
 
 	ol {
-		list-style: decimal;
+		list-style: disc;
 		margin: 0 0 2.25em 0;
-		padding-left: 1.25em;
+		padding-left: 1em;
 	}
 
 		ol li {
-			padding-left: 0.25em;
+			padding-left: 0.5em;
 		}
 
 	ul {
@@ -2392,6 +2392,50 @@ input, select, textarea {
 
 /* Feature Icons */
 
+/* Estilos para la lista no ordenada */
+ol.custom-icons {
+	list-style: none;
+	padding-left: 0;
+  }
+  
+  /* Estilos para los elementos de lista */
+  ol.custom-icons li {
+	list-style-type: none;
+	text-decoration: none;
+	display: inline-block;
+	margin: 0 0 1.6875em 0;
+	padding: 0.35em 0 0 3.5em;
+	position: relative;
+	vertical-align: top;
+	width: 48%;
+  }
+  
+  /* Estilos para los íconos */
+  ol.custom-icons li i {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #ffb441;
+	border-radius: 25%;
+	color: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* font-size: 1.2em; */
+	height: 2.5em;
+	width: 2.5em;
+  }
+  
+  /* Estilos para el texto junto al ícono */
+  ol.custom-icons li .icon-text {
+	position: absolute;
+	left: 0em; /* Ajusta este valor para la distancia horizontal entre el ícono y el texto */
+	top: 0.5em; /* Ajusta este valor para la distancia vertical del texto respecto al ícono */
+	color: #000000; /* Cambia el color del texto si lo deseas */
+  }
+  
+  
+  	/* ICONOS VIEJOS */
 	ul.feature-icons {
 		list-style: none;
 		padding-left: 0;
@@ -2421,7 +2465,7 @@ input, select, textarea {
 			}
 
 			/* COLOR ICONOS FONDO */
-			ul.feature-icons li:before {
+			 ul.feature-icons li:before {
 				background: #ffb441;
 				border-radius: 100%;
 				color: #ffffff;
@@ -2435,22 +2479,28 @@ input, select, textarea {
 				width: 2.5em;
 			}
 
-.feature-icons li {
-  position: relative;
-}
+			/* Estilo personalizado para los nuevos iconos de Bootstrap */
+			.icon_boot.bi {
+				background: #ffb441;
+				border-radius: 100%;
+				color: #ffffff;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				height: 2.5em;
+				width: 2.5em;
+				line-height: 1;
+				text-align: center;
+				font-size: 1.5em;
+			}
+			
+			/* Ejemplo: Si deseas que los iconos sean más grandes, puedes aumentar el font-size */
+			/* .icon_boot.bi {
+				font-size: 2em;
+			} */
+			
 
-.feature-icons li svg.icon {
-  background: #ffb441;
-  border-radius: 50%;
-  color: #ffffff;
-  display: block;
-  height: 2.5em;
-  line-height: 2.5em;
-  text-align: center;
-  width: 2.5em;
-  padding: 0.3em;
-  /* Agrega cualquier otro estilo personalizado aquí */
-}
+	
 
 /* Icons */
 
